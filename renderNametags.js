@@ -5,7 +5,6 @@ function renderNametags(nametags) {
     return `
         <div class="text-center mt-5 justify-content-between">
             ${names.join('')}
-            <code>${JSON.stringify(nametags)}</code>
         </div>
     `
 }

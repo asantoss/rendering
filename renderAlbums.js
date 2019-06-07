@@ -16,7 +16,6 @@ function renderAlbums(albums) {
     return `
         <div class="text-center mt-5 container">
         ${artistProfile}
-            <code>${JSON.stringify(albums)}</code>
         </div>
     `
 }

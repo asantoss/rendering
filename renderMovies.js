@@ -15,7 +15,6 @@ function renderMovies(movies) {
     return `
         <div class="text-center mt-5 justify-content-between">
         ${movie.join("")}
-            <code>${JSON.stringify(movies)}</code>
         </div>
     `
 }

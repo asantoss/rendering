@@ -2,11 +2,10 @@ function renderCircles(circles) {
     // HINT: You probably need to write a for loop!
     //       Or, if you're feeling fancy, use .map()
     newCirlce = circles.map(e => {
-        return `<div class = "circle" style="width:${e.radius}px; height:${e.radius}px; background-color:${e.color};"></div>`
+        return `<div class = "circle my-3 mx-auto" style="width:${e.radius}px; height:${e.radius}px; background-color:${e.color};"></div>`
     })
     return `
         <div class="text-center mt-5 justify-content-around"> ${newCirlce.join("")} 
-            <code>${JSON.stringify(circles)}</code>
         </div>
     `
 }

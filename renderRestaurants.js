@@ -18,7 +18,6 @@ function renderRestaurants(restaurants) {
     return `
         <div class="text-center mt-5 row mx-auto">
         ${restCard.join('')}
-            <code>${JSON.stringify(restaurants)}</code>
         </div>
     `
 }

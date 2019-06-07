@@ -17,7 +17,6 @@ function renderStudents(students) {
         <div class="text-center mt-5 justify-content-center">
         <h1 class="display-5">Roll Call!</h1>
         ${rollCall.join('')}
-            <code>${JSON.stringify(students)}</code>
         </div>
     `
 }
