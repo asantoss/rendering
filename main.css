@@ -1,1 +1,44 @@
 /* Type whatever CSS you need here! */
+
+.circle {
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: auto;
+
+}
+
+.rectangle {
+    margin: auto;
+}
+
+.movie {
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    background-color: lightgrey;
+
+}
+
+.posterImg {
+    display: flex;
+    width: 40%;
+    height: 90%;
+    flex-direction: column;
+    margin: 10px 5px;
+
+}
+
+.posterInfo {
+    flex-direction: column;
+    background-color: white;
+    margin: 10px 5px;
+    padding-top: 10px;
+    width: 60%;
+    height: 90%;
+    padding-left: 10px;
+}
+
+.posterInfo p {
+    margin-bottom: 0;
+}

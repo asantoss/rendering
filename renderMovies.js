@@ -1,7 +1,20 @@
-
 function renderMovies(movies) {
+
+    movie = movies.map(e => {
+        return `<div class=" rounded movie text-left"><img src= "${e.poster}" class="rounded posterImg"</img>
+        <div class ="posterInfo text-left rounded text-monospace"><p><strong>${e.title}</strong><br>
+        <span style ="font-size: 15px">${e.year}</span>
+        <br>
+         IMDB: <br>
+        ${e.imdbRating}/10<br>
+        Rotten Tomatoes:<br>
+        ${e.rottenTomatoesRating}</p> 
+        </div>
+        </div>`
+    })
     return `
-        <div class="text-center mt-5">
+        <div class="text-center mt-5 justify-content-between">
+        ${movie.join("")}
             <code>${JSON.stringify(movies)}</code>
         </div>
     `
@@ -10,8 +23,7 @@ function renderMovies(movies) {
 function movies() {
     var content = document.getElementById('content');
 
-    var moviesAbstraction = [
-        {
+    var moviesAbstraction = [{
             title: "The Dark Knight",
             year: 2008,
             imdbID: "tt0468569",
