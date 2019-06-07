@@ -1,8 +1,8 @@
 function renderMovies(movies) {
 
     movie = movies.map(e => {
-        return `<div class=" rounded movie text-left"><img src= "${e.poster}" class="rounded posterImg"</img>
-        <div class ="posterInfo text-left rounded text-monospace"><p><strong>${e.title}</strong><br>
+        return `<div class="container rounded movie text-left"><img src= "${e.poster}" class="rounded posterImg"</img>
+        <div class =" posterInfo text-left rounded text-monospace"><p><strong>${e.title}</strong><br>
         <span style ="font-size: 15px">${e.year}</span>
         <br>
          IMDB: <br>
