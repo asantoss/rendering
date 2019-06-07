@@ -1,8 +1,46 @@
-
 function renderSurveys(surveys) {
+    let currentSruvey = surveys.map(s => {
+        let fields = s.fields.map(f => {
+            let options = ''
+            if (f.options != undefined && f.options.length > 2) {
+                options = f.options.map(o => {
+                    return `<div  class = "form-check form-check-inline text-capitalize font-weight-normal">
+                    <input class = "form-check-input"
+                    type = "${f.type}"
+                    name = "rating" id="${o}">
+                    <label for="${o}" class="form-check-label ">${o}</label>
+                    </div>`
+                })
+                options = options.join('')
+            } else if (f.options != undefined && f.options.length == 2) {
+                options = f.options.map(o => {
+                    return `<div  class = "form-check text-capitalize font-weight-normal">
+                    <input class = "form-check-input"
+                    type = "${f.type}"
+                    name = "rating" id="${o}">
+                    <label for="${o}" class="form-check-label">${o}</label>
+                    </div>`
+                })
+                options = options.join('')
+            } else {
+                options = `<input style="width: 250px; height: 100px;" type="${f.type}"></input>`
+            }
+            return `<h5>${f.label}</h5>
+            <form>
+            ${options}
+            <button type = "submit"
+            class = "btn btn-primary my-1 d-block" >${s.submitButtonText}</button>
+            </form>`
+        })
+        return `<div><h4>${s.title}</h4></div>
+                <hr>    
+                <div class="mt-0 pt-0 mb-5 px-0">${fields.join('')}</div>`
+    })
+
+
     return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(surveys)}</code>
+        <div class="text-left mt-5">
+            ${currentSruvey.join('')}
         </div>
     `
 }
@@ -10,11 +48,9 @@ function renderSurveys(surveys) {
 function surveys() {
     var content = document.getElementById('content');
 
-    var surveysAbstraction = [
-        {
+    var surveysAbstraction = [{
             title: "Movie Goer Survey",
-            fields: [
-                {
+            fields: [{
                     label: "Have you gone to the movies in the last month?",
                     type: "radio",
                     options: [
@@ -38,8 +74,7 @@ function surveys() {
         },
         {
             title: "DigitalCrafts Survey",
-            fields: [
-                {
+            fields: [{
                     label: "Are you currently enrolled in a DigitalCrafts class?",
                     type: "radio",
                     options: [
