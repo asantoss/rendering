@@ -42,3 +42,14 @@
 .posterInfo p {
     margin-bottom: 0;
 }
+
+
+.nameGreeting {
+    background-color: blue;
+    color: white;
+    font-size: 25px;
+}
+
+.personName {
+    font-size: 20px;
+}
