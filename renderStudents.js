@@ -9,7 +9,7 @@ function renderStudents(students) {
             roll = 'Absent'
             stat = 'red'
         }
-        return `<div class="pt-2 mb-2 mx-auto text-center col border border-dark" style="background-color:${stat}; width: 150px; height: 60px;"><h5 class="mb-0 pb-0">${student.name}</h5><p class="mt-0 pt-0">${roll}</p></div> `
+        return `<div class="pt-2 mb-2 mx-auto text-center col border border-dark" style="background-color:${stat}; width: 150px; height: 60px;"><h5 class="mb-0 pb-0">${student.name}</h5><p class="mt-0 pt-0">${roll}</p></div>`
     })
 
 
