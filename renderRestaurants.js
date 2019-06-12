@@ -4,8 +4,8 @@ function renderRestaurants(restaurants) {
     let restCard = restaurants.map(restaurant => {
 
         let price = '$';
-        return `<div class="col-3">
-        <div class="text-left border border-dark rounded pl-2" style="background-color: lightgrey; width: 160px;">
+        return `<div class="row">
+        <div class="text-left bg-light border border-dark rounded col mx-2 my-2" style="width: 150px;">
         <h4 class="mb-0">${restaurant.name}</h4>
         <span class="text-muted pt-0 mt-0 text-light" style="font-size: 15px;"><small>${restaurant.type}</small></span><br>
         <span class="mt-0 pt-0" style="color: green; font-size: 25px;">${price.repeat(restaurant.priceRating)}</span>
@@ -16,7 +16,7 @@ function renderRestaurants(restaurants) {
     })
 
     return `
-        <div class="text-center mt-5 row mx-auto">
+        <div class="d-flex text-center mt-5 container justify-content-center justify-content-between">
         ${restCard.join('')}
         </div>
     `

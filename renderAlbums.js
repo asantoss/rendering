@@ -2,7 +2,7 @@ function renderAlbums(albums) {
     let artistProfile = albums.map(artist => {
         let artistAlbums = artist.albums.map(album => {
             let albumSongs = album.songs.map(song => {
-                return `<div class="row container my-0 align-middle"><p class="col text-left my-0 py-0 mx-4"><img id="playIcon" class="mr-2" src="./playIcon.png">${song.title}</p><p class="col text-right py-0 my-0">${song.length}</p></div><hr>`
+                return `<div class="row container my-0"><p class="col text-left my-0 py-0 mx-4"><img id="playIcon" class="mr-2" src="./playIcon.png">${song.title}</p><p class="col text-right py-0 my-0">${song.length}</p></div><hr>`
             })
             return `<div class="row mt-5 ml-3"><img class="img-thumbnail" src="${album.albumCover}" style="width: 100px; height: 100px;"></img><h2 class="pt-5 ml-4 align-bottom" >${album.title}</h2></div><hr>
             ${albumSongs.join('')}`
@@ -19,7 +19,6 @@ function renderAlbums(albums) {
         </div>
     `
 }
-
 
 function albums() {
     var content = document.getElementById('content');

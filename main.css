@@ -15,14 +15,12 @@
     height: 200px;
     margin: auto;
     display: flex;
-    background-color: lightgrey;
+    flex-direction: row;
 }
 
 .posterImg {
-    display: flex;
-    width: 40%;
+    flex-basis: 40%;
     height: 90%;
-    flex-direction: column;
     margin: 10px 5px;
 }
 
@@ -31,8 +29,7 @@
     background-color: white;
     margin: 10px 5px;
     padding-top: 10px;
-    width: 60%;
-    height: 90%;
+    flex-basis: 60%;
     padding-left: 10px;
 }
 

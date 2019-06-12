@@ -1,8 +1,8 @@
 function renderMovies(movies) {
 
     movie = movies.map(e => {
-        return `<div class="container rounded movie text-left"><img src= "${e.poster}" class="rounded posterImg"</img>
-        <div class =" posterInfo text-left rounded text-monospace"><p><strong>${e.title}</strong><br>
+        return `<div class="d-flex container bg-dark rounded my-2 movie text-left"><img src= "${e.poster}" class="rounded posterImg"</img>
+        <div class ="bg-light border posterInfo text-left rounded text-monospace"><p><strong>${e.title}</strong><br>
         <span style ="font-size: 15px">${e.year}</span>
         <br>
          IMDB: <br>
@@ -13,7 +13,7 @@ function renderMovies(movies) {
         </div>`
     })
     return `
-        <div class="text-center mt-5 justify-content-between">
+        <div class="d-flex text-center mt-5 align-content-between flex-wrap">
         ${movie.join("")}
         </div>
     `
